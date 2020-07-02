@@ -5,8 +5,9 @@ const para = document.createElement('p');
 
 window.onload = () => {
   let date = new Date();
-  let month = date.getMonth().toString().length === 1 ? (`0${date.getMonth() + 1}`) : `${date.getMonth() + 1}`
-  $fecha_actual.setAttribute('value', `${date.getFullYear()}-${month}-${date.getDate()}`)
+  let month = date.getMonth().toString().length === 1 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`
+  let day = date.getDate().toString().length === 1 ? `0${date.getDate()}` : `${date.getDate()}`
+  $fecha_actual.setAttribute('value', `${date.getFullYear()}-${month}-${day}`)
 }
 
 const datos = () => {
